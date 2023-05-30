@@ -22,16 +22,16 @@ function playGame(boardgame){
 function hit(boardgame){
     y = Math.random() * 10 % BOARDGAME_HEIGHT;
     x = Math.random() * 10 % BOARDGAME_WIDTH;
-    switch(boardgame[x][y]){
+    switch(boardgame[y][x]){
         case 0:
         case -1:
-            boardgame[x][y] = "X";
+            boardgame[y][x] = "X";
             break;
         case "X":
         case "H":
             break;
         default:
-            boardgame[x][y] = "H";
+            boardgame[y][x] = "H";
             playerShipsCoords = playerShipsCoords.replace("|" + x + "," + y + "|", "");
             if (playerShipsCoords === ""){
                 return true;
