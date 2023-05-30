@@ -37,7 +37,7 @@ function hit(boardgame){
                 return true;
             }
     }
-
+    return false;
 }
 
 
